@@ -1,0 +1,51 @@
+{
+  "name": "auto-folder-creator",
+  "productName": "Auto Folder Creator",
+  "version": "1.0.0",
+  "description": "Create project folder structures from templates",
+  "main": "main.js",
+  "author": "Tom Lowndes",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/*.test.js",
+    "dist": "electron-builder --win",
+    "icons": "electron scripts/make-icons.js"
+  },
+  "dependencies": {
+    "docx": "^9.0.0"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "uk.co.tomlowndes.autofoldercreator",
+    "productName": "Auto Folder Creator",
+    "files": [
+      "main.js",
+      "preload.js",
+      "lib/**",
+      "src/**",
+      "assets/**"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "Auto Folder Creator"
+    }
+  },
+  "allowScripts": {
+    "electron@38.8.6": true
+  }
+}
