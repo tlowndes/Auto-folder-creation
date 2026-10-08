@@ -27,8 +27,16 @@ npm run dist
 ```
 
 Output goes to `dist/`:
-- `Auto Folder Creator Setup x.y.z.exe` — installer (adds desktop and Start menu shortcuts)
-- `Auto Folder Creator x.y.z.exe` — portable, runs without installing
+- `Auto-Folder-Creator-Setup.exe` — installer (adds desktop and Start menu shortcuts)
+- `Auto-Folder-Creator-Portable.exe` — portable, runs without installing
+
+## Publishing a release
+
+The file names have no version number, so the download links in the main README always point at the newest release.
+
+1. Bump `version` in `package.json` and run `npm run dist`.
+2. On GitHub: **Releases → Draft a new release**, tag it `vX.Y.Z`.
+3. Attach `dist/Auto-Folder-Creator-Setup.exe` and `dist/Auto-Folder-Creator-Portable.exe`, then publish.
 
 ## Logo and icons
 

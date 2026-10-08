@@ -42,7 +42,11 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": "always",
       "createStartMenuShortcut": true,
-      "shortcutName": "Auto Folder Creator"
+      "shortcutName": "Auto Folder Creator",
+      "artifactName": "Auto-Folder-Creator-Setup.${ext}"
+    },
+    "portable": {
+      "artifactName": "Auto-Folder-Creator-Portable.${ext}"
     }
   },
   "allowScripts": {

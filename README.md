@@ -2,6 +2,14 @@
 
 A Windows desktop app that sets up a new project folder in one step: the right subfolders, a job number, a Word brief and any template files, based on the type of project.
 
+## Download
+
+**[Download the installer for Windows](https://github.com/tlowndes/Auto-folder-creation/releases/latest/download/Auto-Folder-Creator-Setup.exe)** (about 95MB)
+
+Or get the [portable version](https://github.com/tlowndes/Auto-folder-creation/releases/latest/download/Auto-Folder-Creator-Portable.exe), which runs without installing. All versions are on the [releases page](https://github.com/tlowndes/Auto-folder-creation/releases).
+
+The app isn't code-signed, so Windows may show "Windows protected your PC". Click **More info → Run anyway**.
+
 ![Create screen](desktop-app/screenshots/light-1-create.png)
 
 ## Features
