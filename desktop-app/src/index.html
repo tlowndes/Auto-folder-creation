@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'" />
+  <title>Auto Folder Creator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="titlebar">
+    <button id="nav-back" class="ghost back hidden" aria-label="Back"></button>
+    <img src="logo.svg" alt="" width="20" height="20" class="logo" />
+    <span id="title" class="title">Auto Folder Creator</span>
+    <span id="save-status" class="save-status"></span>
+    <span class="spacer"></span>
+    <button id="nav-organise" class="icon-btn" title="Organise existing projects" aria-label="Organise existing projects"></button>
+    <button id="nav-settings" class="icon-btn" title="Settings" aria-label="Settings"></button>
+  </header>
+
+  <!-- Create -->
+  <main id="view-create" class="view">
+    <div class="create-grid">
+      <section class="form">
+        <div id="no-base" class="notice hidden">
+          Choose where your projects live to get started. <button id="pick-base-inline" class="link">Choose folder</button>
+        </div>
+
+        <div class="label-row"><span class="label">Type</span><span class="hint"><kbd>Ctrl</kbd> + <kbd>1</kbd>–<kbd id="kbd-max">4</kbd></span></div>
+        <div id="type-chips" class="chips"></div>
+
+        <label class="label" for="project-name">Project name</label>
+        <div class="name-field">
+          <span id="name-prefix" class="job-badge hidden"></span>
+          <input id="project-name" type="text" placeholder="Spring Campaign" autocomplete="off" spellcheck="false" />
+        </div>
+        <p id="exists-warning" class="warning hidden"></p>
+
+        <button id="create-btn" class="primary big"><span>Create project</span><kbd class="on-primary">Enter</kbd></button>
+        <div id="status" class="status hidden"></div>
+      </section>
+
+      <aside class="preview">
+        <span class="label">Preview</span>
+        <p id="preview-path" class="path"></p>
+        <ul id="tree" class="tree"></ul>
+      </aside>
+    </div>
+
+    <section class="recent">
+      <span class="label">Recent</span>
+      <div id="recent-list"></div>
+    </section>
+  </main>
+
+  <!-- Settings -->
+  <main id="view-settings" class="view hidden">
+    <div class="settings-grid">
+      <nav id="settings-nav" class="settings-nav"></nav>
+      <section id="settings-detail" class="settings-detail"></section>
+    </div>
+  </main>
+
+  <!-- Organise existing -->
+  <main id="view-organise" class="view hidden">
+    <div class="org-head">
+      <span id="org-count" class="org-count"></span>
+      <span class="spacer"></span>
+      <label for="org-filter" class="hint">Show</label>
+      <select id="org-filter"></select>
+    </div>
+    <div id="org-list" class="org-list"></div>
+    <div class="org-foot">
+      <span id="org-info" class="hint"></span>
+      <span class="spacer"></span>
+      <button id="org-undo" class="hidden"></button>
+      <button id="org-convert" class="primary"></button>
+    </div>
+    <div id="org-status" class="status hidden"></div>
+  </main>
+
+  <script src="icons.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>
